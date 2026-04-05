@@ -3,106 +3,101 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Priyanka G P — Gen AI Portfolio</title>
+<title>Priyanka G P — Software Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
     --black: #0e0e0e;
     --white: #fafaf8;
-    --gray-50: #f4f4f0;
-    --gray-200: #e0dfd9;
-    --gray-400: #9b9a94;
-    --gray-600: #5a5956;
-    --accent: #1558d6;
-    --accent-light: #eaf0fd;
-    --accent-mid: #2563eb;
-    --accent-dark: #1e40af;
+    --gray-50: #f5f5f2;
+    --gray-200: #e2e1dc;
+    --gray-400: #9e9d97;
+    --gray-600: #5c5b57;
+    --accent: #1a5c3f;
+    --accent-light: #e8f2ed;
+    --accent-mid: #2d7a56;
     --serif: 'DM Serif Display', Georgia, serif;
     --sans: 'DM Sans', system-ui, sans-serif;
     --mono: 'DM Mono', 'Courier New', monospace;
     --max: 860px;
+    --section-gap: 5rem;
   }
   html { scroll-behavior: smooth; }
   body { font-family: var(--sans); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
 
-  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 0 2rem; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(250,250,248,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); padding: 0 2rem; }
   .nav-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 56px; }
-  .nav-logo { font-family: var(--serif); font-size: 1.05rem; }
-  .nav-badge { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.07em; color: var(--accent-mid); background: var(--accent-light); padding: 0.25rem 0.65rem; border-radius: 2px; text-transform: uppercase; }
-  .nav-links { display: flex; gap: 1.8rem; }
-  .nav-links a { font-size: 0.82rem; color: var(--gray-600); letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-logo { font-family: var(--serif); font-size: 1.1rem; letter-spacing: -0.01em; }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-size: 0.85rem; color: var(--gray-600); letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--black); }
 
   .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
-  section { padding: 5rem 0; }
+  section { padding: var(--section-gap) 0; }
 
-  #hero { padding: 6.5rem 0 5rem; border-bottom: 1px solid var(--gray-200); }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.1em; color: var(--accent-mid); text-transform: uppercase; margin-bottom: 1.5rem; padding: 0.3rem 0.8rem; border: 1px solid var(--accent-mid); border-radius: 2px; }
-  .pulse-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-mid); animation: pulse 2s infinite; flex-shrink: 0; }
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.2} }
-  .hero-name { font-family: var(--serif); font-size: clamp(2.6rem, 5.5vw, 4rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+  #hero { padding: 7rem 0 5rem; border-bottom: 1px solid var(--gray-200); }
+  .hero-eyebrow { display: inline-block; font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.1em; color: var(--accent-mid); text-transform: uppercase; margin-bottom: 1.5rem; padding: 0.3rem 0.75rem; border: 1px solid var(--accent-mid); border-radius: 2px; }
+  .hero-name { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 4.2rem); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
   .hero-name em { font-style: italic; color: var(--accent); }
-  .hero-bio { max-width: 580px; font-size: 1.04rem; color: var(--gray-600); font-weight: 300; line-height: 1.8; margin-bottom: 1.75rem; }
-  .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.25rem; }
-  .hero-tag { font-family: var(--mono); font-size: 0.74rem; padding: 0.25rem 0.65rem; background: var(--accent-light); color: var(--accent-dark); border-radius: 2px; }
+  .hero-bio { max-width: 580px; font-size: 1.05rem; color: var(--gray-600); font-weight: 300; line-height: 1.8; margin-bottom: 2.5rem; }
   .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .btn { display: inline-block; font-size: 0.83rem; font-weight: 500; letter-spacing: 0.04em; padding: 0.65rem 1.4rem; border-radius: 2px; transition: all 0.2s; text-transform: uppercase; }
-  .btn-primary { background: var(--accent); color: var(--white); border: 1px solid var(--accent); }
-  .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .btn { display: inline-block; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; padding: 0.65rem 1.5rem; border-radius: 2px; transition: all 0.2s; text-transform: uppercase; }
+  .btn-primary { background: var(--black); color: var(--white); border: 1px solid var(--black); }
+  .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
   .btn-outline { background: transparent; color: var(--black); border: 1px solid var(--gray-400); }
   .btn-outline:hover { border-color: var(--black); }
 
-  .section-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.6rem; }
-  .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.3rem); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 2.25rem; }
+  .section-label { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.75rem; }
+  .section-title { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 2.5rem; }
 
-  #why { background: var(--gray-50); }
-  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-  .why-card { background: var(--gray-50); padding: 1.75rem; }
-  .why-num { font-family: var(--mono); font-size: 0.7rem; color: var(--gray-400); margin-bottom: 0.75rem; }
-  .why-title { font-size: 0.95rem; font-weight: 500; margin-bottom: 0.4rem; }
-  .why-desc { font-size: 0.84rem; color: var(--gray-600); line-height: 1.65; }
+  #skills { background: var(--gray-50); }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+  .skill-cell { background: var(--gray-50); padding: 1.5rem; }
+  .skill-cell-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.75rem; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag { font-size: 0.8rem; padding: 0.25rem 0.6rem; background: var(--white); border: 1px solid var(--gray-200); color: var(--gray-600); border-radius: 2px; }
 
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-  .skill-cell { background: var(--white); padding: 1.4rem; }
-  .skill-cell-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.7rem; }
-  .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-  .tag { font-size: 0.77rem; padding: 0.22rem 0.55rem; background: var(--gray-50); border: 1px solid var(--gray-200); color: var(--gray-600); border-radius: 2px; }
+  .exp-list { display: flex; flex-direction: column; }
+  .exp-item { display: grid; grid-template-columns: 160px 1fr; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--gray-200); }
+  .exp-item:first-child { border-top: 1px solid var(--gray-200); }
+  .exp-date { font-family: var(--mono); font-size: 0.78rem; color: var(--gray-400); letter-spacing: 0.04em; line-height: 1.5; }
+  .exp-company { font-size: 0.82rem; color: var(--accent-mid); font-weight: 500; margin-top: 0.3rem; }
+  .exp-role { font-size: 1rem; font-weight: 500; margin-bottom: 0.5rem; }
+  .exp-desc { font-size: 0.9rem; color: var(--gray-600); line-height: 1.7; }
+  .exp-desc ul { padding-left: 1.2rem; margin-top: 0.4rem; }
+  .exp-desc li { margin-bottom: 0.35rem; }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.8rem; }
+  .exp-tag { font-family: var(--mono); font-size: 0.72rem; padding: 0.2rem 0.55rem; background: var(--accent-light); color: var(--accent); border-radius: 2px; }
 
-  #projects-section { background: var(--gray-50); }
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-  .project-card { background: var(--white); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.7rem; transition: background 0.2s; }
+  #projects { background: var(--gray-50); }
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
+  .project-card { background: var(--white); padding: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; transition: background 0.2s; }
   .project-card:hover { background: var(--accent-light); }
-  .project-num { font-family: var(--mono); font-size: 0.7rem; color: var(--gray-400); }
-  .project-title { font-size: 0.97rem; font-weight: 500; line-height: 1.3; }
-  .project-desc { font-size: 0.83rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
-  .project-stack { font-family: var(--mono); font-size: 0.7rem; color: var(--accent-mid); padding-top: 0.5rem; border-top: 1px solid var(--gray-200); }
-  .project-badge { font-size: 0.72rem; font-family: var(--mono); color: var(--accent-dark); background: var(--accent-light); padding: 0.25rem 0.55rem; border-radius: 2px; display: inline-block; }
-
-  #background { }
-  .bg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--gray-200); border: 1px solid var(--gray-200); }
-  .bg-card { background: var(--white); padding: 1.75rem; }
-  .bg-card-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-mid); margin-bottom: 0.55rem; }
-  .bg-card-title { font-size: 0.97rem; font-weight: 500; margin-bottom: 0.3rem; }
-  .bg-card-sub { font-size: 0.8rem; color: var(--gray-400); margin-bottom: 0.7rem; font-family: var(--mono); }
-  .bg-card-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; }
+  .project-num { font-family: var(--mono); font-size: 0.72rem; color: var(--gray-400); letter-spacing: 0.08em; }
+  .project-title { font-size: 1rem; font-weight: 500; line-height: 1.3; }
+  .project-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
+  .project-stack { font-family: var(--mono); font-size: 0.72rem; color: var(--accent-mid); padding-top: 0.5rem; border-top: 1px solid var(--gray-200); }
 
   #contact { border-top: 1px solid var(--gray-200); }
   .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .contact-heading { font-family: var(--serif); font-size: clamp(1.9rem, 3.5vw, 2.6rem); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.9rem; }
-  .contact-sub { font-size: 0.92rem; color: var(--gray-600); font-weight: 300; line-height: 1.7; margin-bottom: 1.75rem; }
+  .contact-heading { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1rem; }
+  .contact-sub { font-size: 0.95rem; color: var(--gray-600); font-weight: 300; line-height: 1.7; margin-bottom: 2rem; }
   .contact-links { display: flex; flex-direction: column; }
-  .contact-link { display: flex; align-items: center; gap: 0.75rem; font-size: 0.87rem; padding: 0.7rem 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600); transition: color 0.2s; }
+  .contact-link { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; padding: 0.75rem 0; border-bottom: 1px solid var(--gray-200); color: var(--gray-600); transition: color 0.2s; }
   .contact-link:hover { color: var(--black); }
-  .contact-link-label { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); min-width: 78px; }
+  .contact-link-label { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); min-width: 80px; }
+  .availability-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.9rem; border: 1px solid var(--accent-mid); border-radius: 2px; font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; color: var(--accent-mid); margin-bottom: 1.5rem; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-mid); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  footer { padding: 2rem 0; border-top: 1px solid var(--gray-200); text-align: center; font-size: 0.77rem; color: var(--gray-400); font-family: var(--mono); }
+  footer { padding: 2rem 0; border-top: 1px solid var(--gray-200); text-align: center; font-size: 0.8rem; color: var(--gray-400); font-family: var(--mono); }
 
   @media (max-width: 640px) {
-    .bg-grid { grid-template-columns: 1fr; }
+    .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
     .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    .nav-links, .nav-badge { display: none; }
+    .nav-links { display: none; }
   }
 </style>
 </head>
@@ -111,99 +106,87 @@
 <nav>
   <div class="nav-inner">
     <span class="nav-logo">Priyanka G P</span>
-    <span class="nav-badge">Gen AI Academy APAC</span>
     <div class="nav-links">
-      <a href="#why">Why AI</a>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#projects-section">Projects</a>
-      <a href="#background">Background</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
 <section id="hero">
-  <div class="container">
-    <div class="hero-eyebrow"><span class="pulse-dot"></span>Applying · Gen AI Academy APAC Edition</div>
-    <h1 class="hero-name">Engineering discipline<br>meets <em>generative AI.</em></h1>
+  <div class="container" id="about">
+    <div class="hero-eyebrow">Software Engineer</div>
+    <h1 class="hero-name">Building <em>reliable software</em><br>with embedded expertise.</h1>
     <p class="hero-bio">
-      I'm Priyanka — a software engineer with a background in safety-critical systems at Bosch, now transitioning into AI. I bring strong Python skills, hands-on LLM evaluation experience, and an engineer's instinct for building things that actually work. I'm applying to Gen AI Academy APAC to build real, production-ready AI solutions on Google Cloud.
+      Software engineer with 2+ years of industry experience at Bosch Global Software Technologies, working on embedded systems, automotive ECU software, and functional safety (ISO 26262). Skilled in C, C++, and Python — with a strong foundation in debugging, validation, and system reliability. Currently upskilling in RTOS and IoT, and actively looking for the next challenge.
     </p>
-    <div class="hero-tags">
-      <span class="hero-tag">Python</span>
-      <span class="hero-tag">LLM evaluation</span>
-      <span class="hero-tag">AI foundations — Qualcomm</span>
-      <span class="hero-tag">Data analysis</span>
-      <span class="hero-tag">Systems thinking</span>
-      <span class="hero-tag">Google Cloud (learning)</span>
-    </div>
     <div class="hero-actions">
-      <a href="#projects-section" class="btn btn-primary">See my AI work</a>
-      <a href="#contact" class="btn btn-outline">Get in touch</a>
-    </div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="container">
-    <div class="section-label">Motivation</div>
-    <h2 class="section-title">Why I'm applying</h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-num">01 —</div>
-        <div class="why-title">Engineer by instinct</div>
-        <div class="why-desc">2+ years at Bosch building safety-critical software taught me to think in systems — fault tolerance, edge cases, reliability. That rigour translates directly into building trustworthy AI solutions.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">02 —</div>
-        <div class="why-title">Already working with AI</div>
-        <div class="why-desc">I've completed the Qualcomm AI Technical Foundations program and worked on real LLM-based content evaluation — assessing model outputs for quality, accuracy, and relevance. This isn't a new interest; it's an active direction.</div>
-      </div>
-      <div class="why-card">
-        <div class="why-num">03 —</div>
-        <div class="why-title">Build-first mindset</div>
-        <div class="why-desc">Gen AI Academy's challenge-based, project-driven format is exactly what I need. I don't want to watch lectures — I want to ship real AI solutions on Google Cloud Vertex AI and earn the results that come with that.</div>
-      </div>
+      <a href="#contact" class="btn btn-primary">Get in touch</a>
+      <a href="#experience" class="btn btn-outline">View experience</a>
     </div>
   </div>
 </section>
 
 <section id="skills">
   <div class="container">
-    <div class="section-label">Skills</div>
-    <h2 class="section-title">What I bring to the program</h2>
+    <div class="section-label">Technical skills</div>
+    <h2 class="section-title">What I work with</h2>
     <div class="skills-grid">
       <div class="skill-cell">
-        <div class="skill-cell-label">AI & LLM</div>
+        <div class="skill-cell-label">Languages</div>
         <div class="skill-tags">
-          <span class="tag">LLM output evaluation</span>
-          <span class="tag">Prompt engineering</span>
-          <span class="tag">AI foundations (Qualcomm)</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-label">Programming</div>
-        <div class="skill-tags">
+          <span class="tag">C</span>
+          <span class="tag">C++</span>
           <span class="tag">Python</span>
-          <span class="tag">C / C++</span>
-          <span class="tag">Scripting & automation</span>
-          <span class="tag">Data analysis</span>
+          <span class="tag">Java (basic)</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-label">Cloud & tools</div>
+        <div class="skill-cell-label">Embedded systems</div>
         <div class="skill-tags">
-          <span class="tag">Google Cloud (learning)</span>
-          <span class="tag">Vertex AI (exploring)</span>
-          <span class="tag">REST APIs</span>
+          <span class="tag">ECU software</span>
+          <span class="tag">RTOS</span>
+          <span class="tag">Bare-metal C</span>
+          <span class="tag">Microcontrollers</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-cell-label">Engineering strengths</div>
+        <div class="skill-cell-label">Platforms</div>
         <div class="skill-tags">
-          <span class="tag">Systems thinking</span>
+          <span class="tag">ST</span>
+          <span class="tag">Infineon (IFX)</span>
+          <span class="tag">STM32</span>
+          <span class="tag">ESP32</span>
+        </div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cell-label">Tools</div>
+        <div class="skill-tags">
+          <span class="tag">INCA</span>
+          <span class="tag">UDE</span>
+          <span class="tag">ASCET</span>
+          <span class="tag">TPT</span>
+          <span class="tag">DOORS</span>
+        </div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cell-label">Safety standards</div>
+        <div class="skill-tags">
+          <span class="tag">ISO 26262</span>
+          <span class="tag">Functional safety</span>
+          <span class="tag">DTC / DFC</span>
+          <span class="tag">Req. traceability</span>
+        </div>
+      </div>
+      <div class="skill-cell">
+        <div class="skill-cell-label">Core strengths</div>
+        <div class="skill-tags">
           <span class="tag">Debugging</span>
-          <span class="tag">Validation & testing</span>
+          <span class="tag">Validation</span>
+          <span class="tag">Data analysis</span>
           <span class="tag">Critical thinking</span>
         </div>
       </div>
@@ -211,77 +194,102 @@
   </div>
 </section>
 
-<section id="projects-section">
+<section id="experience">
   <div class="container">
-    <div class="section-label">Work & learning</div>
-    <h2 class="section-title">Projects & experience</h2>
-    <div class="projects-grid">
+    <div class="section-label">Work history</div>
+    <h2 class="section-title">Experience</h2>
+    <div class="exp-list">
 
-      <div class="project-card">
-        <div class="project-num">01</div>
-        <div class="project-title">LLM Content Evaluation</div>
-        <div class="project-desc">Evaluated AI-generated outputs for quality, relevance, and factual accuracy as part of structured content rating work. Built a rigorous assessment methodology across multiple quality dimensions — directly relevant to responsible AI and model improvement.</div>
-        <div class="project-stack">LLM outputs · Quality assessment · Structured reasoning</div>
-        <span class="project-badge">Hands-on AI work</span>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">Aug 2019 –<br>Oct 2021</div>
+          <div class="exp-company">Bosch Global Software Technologies</div>
+        </div>
+        <div>
+          <div class="exp-role">Software Engineer</div>
+          <div class="exp-desc">
+            <ul>
+              <li>Developed and validated embedded software modules for automotive ECU systems, ensuring compliance with functional safety standards.</li>
+              <li>Enhanced monitoring logic for engine management systems — detecting malfunctions and triggering diagnostic fault codes for robust fault handling.</li>
+              <li>Validated software across multiple microcontroller platforms (ST, Infineon IFX), ensuring cross-platform reliability for production systems.</li>
+              <li>Debugged system-level issues using calibration and debug toolchains, improving fault detection accuracy and system reliability.</li>
+              <li>Automated test validation workflows, increasing test coverage and reducing manual effort.</li>
+              <li>Maintained requirement traceability and supported ISO 26262 functional safety processes throughout the development lifecycle.</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">C / C++</span>
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">ISO 26262</span>
+            <span class="exp-tag">ECU systems</span>
+            <span class="exp-tag">Debugging</span>
+            <span class="exp-tag">Test automation</span>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-num">02</div>
-        <div class="project-title">AI Technical Foundations — Qualcomm Program</div>
-        <div class="project-desc">Completed a structured AI upskilling certification covering foundations of machine learning, generative AI concepts, data pipelines, and responsible AI practices. Provided a strong conceptual base for working with tools like Vertex AI.</div>
-        <div class="project-stack">AI fundamentals · Python · Data workflows</div>
-        <span class="project-badge">Certified program</span>
-      </div>
-
-      <div class="project-card">
-        <div class="project-num">03</div>
-        <div class="project-title">Python for Data Analysis & Automation</div>
-        <div class="project-desc">Developed Python scripts for data processing, analysis, and workflow automation — applied in real content evaluation tasks involving structured data, pattern recognition, and decision logic. A practical foundation for AI-powered pipeline development.</div>
-        <div class="project-stack">Python · Pandas · Data analysis · Automation</div>
-        <span class="project-badge">Applied Python work</span>
-      </div>
-
-      <div class="project-card">
-        <div class="project-num">04</div>
-        <div class="project-title">Goal: AI-Powered Diagnostic Tool</div>
-        <div class="project-desc">My target project for Gen AI Academy — an intelligent diagnostic or monitoring assistant that connects my embedded systems background with generative AI on Google Cloud. The goal: a production-ready solution, not a demo.</div>
-        <div class="project-stack">Vertex AI · Google Cloud · Generative AI · Python</div>
-        <span class="project-badge">Program goal</span>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-date">2022 – Present</div>
+          <div class="exp-company">Career break</div>
+        </div>
+        <div>
+          <div class="exp-role">Career Break &amp; Personal Development</div>
+          <div class="exp-desc">
+            Took a planned career break, using the time for personal development and upskilling.
+            <ul>
+              <li>Completed AI Technical Foundations upskilling program (Qualcomm).</li>
+              <li>Strengthened Python skills and explored data analysis and LLM-based workflows.</li>
+              <li>Actively preparing for re-entry into embedded systems engineering — currently studying RTOS fundamentals, task scheduling, and IoT firmware design.</li>
+            </ul>
+          </div>
+          <div class="exp-tags">
+            <span class="exp-tag">Python</span>
+            <span class="exp-tag">RTOS (studying)</span>
+            <span class="exp-tag">IoT (studying)</span>
+            <span class="exp-tag">AI / LLM workflows</span>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<section id="background">
+<section id="projects">
   <div class="container">
-    <div class="section-label">Professional background</div>
-    <h2 class="section-title">Where I come from</h2>
-    <div class="bg-grid">
-      <div class="bg-card">
-        <div class="bg-card-label">Industry experience</div>
-        <div class="bg-card-title">Software Engineer — Bosch Global Software Technologies</div>
-        <div class="bg-card-sub">Aug 2019 – Oct 2021</div>
-        <div class="bg-card-desc">Developed and validated automotive ECU software under ISO 26262 functional safety standards. Built strong foundations in C/C++, Python, debugging, and test automation — the kind of engineering discipline that makes AI solutions reliable, not just functional.</div>
+    <div class="section-label">Selected work</div>
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-title">Engine Management Monitoring — Automotive ECU</div>
+        <div class="project-desc">Enhanced monitoring and fault detection logic for an automotive engine management system. Strengthened diagnostic coverage by improving DFC/DTC triggering and validating behaviour across multiple microcontroller platforms.</div>
+        <div class="project-stack">C · Embedded debug tools · ISO 26262</div>
       </div>
-      <div class="bg-card">
-        <div class="bg-card-label">Education</div>
-        <div class="bg-card-title">B.E. — Electronics and Communication Engineering</div>
-        <div class="bg-card-sub">Panimalar Engineering College · 2015 – 2019</div>
-        <div class="bg-card-desc">Technical grounding in electronics, signal processing, and software engineering. Combined with industry experience, this gives me the analytical depth to pick up and apply complex AI tools quickly and correctly.</div>
+
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-title">Cross-Platform ECU Software Validation</div>
+        <div class="project-desc">Validated embedded software modules across multiple microcontroller families, ensuring consistent functional safety compliance for production automotive systems under ISO 26262 requirements.</div>
+        <div class="project-stack">C · Test automation · Req. traceability</div>
       </div>
-      <div class="bg-card">
-        <div class="bg-card-label">Career break & pivot</div>
-        <div class="bg-card-title">Personal Development & AI Exploration</div>
-        <div class="bg-card-sub">2022 – Present</div>
-        <div class="bg-card-desc">Took a planned career break and used it to pivot toward AI. Completed Qualcomm's AI Technical Foundations program, worked on LLM evaluation tasks, and strengthened Python skills. Actively re-entering the industry with an AI-first focus.</div>
+
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-title">Automated Test Workflow for ECU Modules</div>
+        <div class="project-desc">Automated test execution and coverage reporting for ECU software validation, reducing manual effort and improving traceability between software requirements and test outcomes.</div>
+        <div class="project-stack">Python · Test automation toolchain</div>
       </div>
-      <div class="bg-card">
-        <div class="bg-card-label">The differentiator</div>
-        <div class="bg-card-title">Engineering rigour applied to Gen AI</div>
-        <div class="bg-card-sub">Why this background matters</div>
-        <div class="bg-card-desc">Most Gen AI learners come without a software engineering foundation. I bring systematic validation thinking, safety-first design habits, and real debugging experience to AI development — which means I build solutions that are robust, not just impressive in a demo.</div>
+
+      <div class="project-card">
+        <div class="project-num">04</div>
+        <div class="project-title">RTOS &amp; IoT Systems — Personal Study</div>
+        <div class="project-desc">Ongoing hands-on study of FreeRTOS scheduling, task state machines, inter-task communication, and IoT firmware patterns — building toward production-grade embedded development on STM32 and ESP32.</div>
+        <div class="project-stack">FreeRTOS · C · STM32 · ESP32</div>
       </div>
+
     </div>
   </div>
 </section>
@@ -290,8 +298,12 @@
   <div class="container">
     <div class="contact-inner">
       <div>
-        <h2 class="contact-heading">Let's connect.</h2>
-        <p class="contact-sub">Applying for Gen AI Academy APAC Edition 2026. Open to conversations about AI, Google Cloud, and building intelligent systems. Based in Chennai — available for fully remote programs.</p>
+        <h2 class="contact-heading">Let's work together.</h2>
+        <p class="contact-sub">Open to software and embedded engineering roles, as well as consulting engagements. Especially interested in automotive, safety-critical systems, or IoT. Available for remote and global opportunities.</p>
+        <div class="availability-badge">
+          <span class="dot"></span>
+          Available for new opportunities
+        </div>
       </div>
       <div>
         <div class="contact-links">
@@ -309,7 +321,7 @@
           </div>
           <div class="contact-link">
             <span class="contact-link-label">Location</span>
-            <span>Chennai, India · Remote-ready</span>
+            <span>Chennai, India · Remote-friendly</span>
           </div>
         </div>
       </div>
@@ -319,7 +331,7 @@
 
 <footer>
   <div class="container">
-    Priyanka G P · Gen AI Academy APAC Application · Chennai, India
+    Priyanka G P · Software Engineer · Chennai, India
   </div>
 </footer>
 
