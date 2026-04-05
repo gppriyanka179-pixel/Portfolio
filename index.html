@@ -79,6 +79,7 @@
   .project-title { font-size: 1rem; font-weight: 500; line-height: 1.3; }
   .project-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.65; flex: 1; }
   .project-stack { font-family: var(--mono); font-size: 0.72rem; color: var(--accent-mid); padding-top: 0.5rem; border-top: 1px solid var(--gray-200); }
+  .project-badge { font-family: var(--mono); font-size: 0.7rem; padding: 0.2rem 0.5rem; background: var(--accent-light); color: var(--accent); border-radius: 2px; display: inline-block; }
 
   #contact { border-top: 1px solid var(--gray-200); }
   .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
@@ -119,13 +120,13 @@
 <section id="hero">
   <div class="container" id="about">
     <div class="hero-eyebrow">Software Engineer</div>
-    <h1 class="hero-name">Building <em>reliable software</em><br>with embedded expertise.</h1>
+    <h1 class="hero-name">Building <em>reliable software</em><br>with Python &amp; embedded expertise.</h1>
     <p class="hero-bio">
-      Software engineer with 2+ years of industry experience at Bosch Global Software Technologies, working on embedded systems, automotive ECU software, and functional safety (ISO 26262). Skilled in C, C++, and Python — with a strong foundation in debugging, validation, and system reliability. Currently upskilling in RTOS and IoT, and actively looking for the next challenge.
+      Software engineer with 2+ years of experience at Bosch Global Software Technologies, specialising in Python-based automation, validation workflows, and safety-critical embedded systems (ISO 26262). Currently expanding into web development and cloud-backed applications — building with Flask, REST APIs, and Django to create scalable, production-ready solutions.
     </p>
     <div class="hero-actions">
       <a href="#contact" class="btn btn-primary">Get in touch</a>
-      <a href="#experience" class="btn btn-outline">View experience</a>
+      <a href="#projects" class="btn btn-outline">View projects</a>
     </div>
   </div>
 </section>
@@ -135,61 +136,67 @@
     <div class="section-label">Technical skills</div>
     <h2 class="section-title">What I work with</h2>
     <div class="skills-grid">
+
       <div class="skill-cell">
         <div class="skill-cell-label">Languages</div>
         <div class="skill-tags">
+          <span class="tag">Python</span>
           <span class="tag">C</span>
           <span class="tag">C++</span>
-          <span class="tag">Python</span>
-          <span class="tag">Java (basic)</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
         </div>
       </div>
+
+      <div class="skill-cell">
+        <div class="skill-cell-label">Web & API</div>
+        <div class="skill-tags">
+          <span class="tag">Flask</span>
+          <span class="tag">Django</span>
+          <span class="tag">REST API</span>
+          <span class="tag">JSON</span>
+        </div>
+      </div>
+
+      <div class="skill-cell">
+        <div class="skill-cell-label">Python ecosystem</div>
+        <div class="skill-tags">
+          <span class="tag">Data analysis</span>
+          <span class="tag">Automation scripting</span>
+          <span class="tag">Machine learning (basics)</span>
+          <span class="tag">Pandas</span>
+        </div>
+      </div>
+
+      <div class="skill-cell">
+        <div class="skill-cell-label">Cloud & infra</div>
+        <div class="skill-tags">
+          <span class="tag">Google Cloud (learning)</span>
+          <span class="tag">Cloud-based deployment</span>
+          <span class="tag">Reproducible environments</span>
+        </div>
+      </div>
+
       <div class="skill-cell">
         <div class="skill-cell-label">Embedded systems</div>
         <div class="skill-tags">
           <span class="tag">ECU software</span>
           <span class="tag">RTOS</span>
-          <span class="tag">Bare-metal C</span>
+          <span class="tag">ISO 26262</span>
           <span class="tag">Microcontrollers</span>
         </div>
       </div>
-      <div class="skill-cell">
-        <div class="skill-cell-label">Platforms</div>
-        <div class="skill-tags">
-          <span class="tag">ST</span>
-          <span class="tag">Infineon (IFX)</span>
-          <span class="tag">STM32</span>
-          <span class="tag">ESP32</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-label">Tools</div>
-        <div class="skill-tags">
-          <span class="tag">INCA</span>
-          <span class="tag">UDE</span>
-          <span class="tag">ASCET</span>
-          <span class="tag">TPT</span>
-          <span class="tag">DOORS</span>
-        </div>
-      </div>
-      <div class="skill-cell">
-        <div class="skill-cell-label">Safety standards</div>
-        <div class="skill-tags">
-          <span class="tag">ISO 26262</span>
-          <span class="tag">Functional safety</span>
-          <span class="tag">DTC / DFC</span>
-          <span class="tag">Req. traceability</span>
-        </div>
-      </div>
+
       <div class="skill-cell">
         <div class="skill-cell-label">Core strengths</div>
         <div class="skill-tags">
           <span class="tag">Debugging</span>
-          <span class="tag">Validation</span>
-          <span class="tag">Data analysis</span>
+          <span class="tag">Validation & testing</span>
+          <span class="tag">Problem solving</span>
           <span class="tag">Critical thinking</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -210,18 +217,18 @@
           <div class="exp-desc">
             <ul>
               <li>Developed and validated embedded software modules for automotive ECU systems, ensuring compliance with functional safety standards.</li>
+              <li>Used Python for automation, data analysis, and validation workflow scripting — improving test efficiency and coverage.</li>
               <li>Enhanced monitoring logic for engine management systems — detecting malfunctions and triggering diagnostic fault codes for robust fault handling.</li>
               <li>Validated software across multiple microcontroller platforms (ST, Infineon IFX), ensuring cross-platform reliability for production systems.</li>
-              <li>Debugged system-level issues using calibration and debug toolchains, improving fault detection accuracy and system reliability.</li>
-              <li>Automated test validation workflows, increasing test coverage and reducing manual effort.</li>
+              <li>Debugged system-level issues using calibration and debug toolchains, improving fault detection accuracy.</li>
               <li>Maintained requirement traceability and supported ISO 26262 functional safety processes throughout the development lifecycle.</li>
             </ul>
           </div>
           <div class="exp-tags">
-            <span class="exp-tag">C / C++</span>
             <span class="exp-tag">Python</span>
+            <span class="exp-tag">C / C++</span>
+            <span class="exp-tag">Automation</span>
             <span class="exp-tag">ISO 26262</span>
-            <span class="exp-tag">ECU systems</span>
             <span class="exp-tag">Debugging</span>
             <span class="exp-tag">Test automation</span>
           </div>
@@ -236,18 +243,20 @@
         <div>
           <div class="exp-role">Career Break &amp; Personal Development</div>
           <div class="exp-desc">
-            Took a planned career break, using the time for personal development and upskilling.
+            Took a planned career break, using the time for upskilling and personal development.
             <ul>
-              <li>Completed AI Technical Foundations upskilling program (Qualcomm).</li>
-              <li>Strengthened Python skills and explored data analysis and LLM-based workflows.</li>
-              <li>Actively preparing for re-entry into embedded systems engineering — currently studying RTOS fundamentals, task scheduling, and IoT firmware design.</li>
+              <li>Completed AI Technical Foundations program (Qualcomm) — covering ML concepts, data workflows, and AI evaluation.</li>
+              <li>Strengthened Python skills including data analysis, scripting, and web development fundamentals.</li>
+              <li>Built portfolio projects using Flask and REST APIs; exploring Django for full-stack web applications.</li>
+              <li>Studying cloud deployment workflows to build and ship scalable backend applications.</li>
             </ul>
           </div>
           <div class="exp-tags">
             <span class="exp-tag">Python</span>
-            <span class="exp-tag">RTOS (studying)</span>
-            <span class="exp-tag">IoT (studying)</span>
-            <span class="exp-tag">AI / LLM workflows</span>
+            <span class="exp-tag">Flask</span>
+            <span class="exp-tag">REST API</span>
+            <span class="exp-tag">Django</span>
+            <span class="exp-tag">ML basics</span>
           </div>
         </div>
       </div>
@@ -264,30 +273,32 @@
 
       <div class="project-card">
         <div class="project-num">01</div>
-        <div class="project-title">Engine Management Monitoring — Automotive ECU</div>
-        <div class="project-desc">Enhanced monitoring and fault detection logic for an automotive engine management system. Strengthened diagnostic coverage by improving DFC/DTC triggering and validating behaviour across multiple microcontroller platforms.</div>
-        <div class="project-stack">C · Embedded debug tools · ISO 26262</div>
+        <div class="project-title">Sensor Data REST API — Flask</div>
+        <div class="project-desc">Built a REST API using Flask that accepts sensor data as input, processes it, and returns structured JSON responses. Designed with clean endpoint architecture and error handling — connecting an engineering background to modern backend development.</div>
+        <div class="project-stack">Python · Flask · REST API · JSON</div>
+        <span class="project-badge">In progress</span>
       </div>
 
       <div class="project-card">
         <div class="project-num">02</div>
-        <div class="project-title">Cross-Platform ECU Software Validation</div>
-        <div class="project-desc">Validated embedded software modules across multiple microcontroller families, ensuring consistent functional safety compliance for production automotive systems under ISO 26262 requirements.</div>
-        <div class="project-stack">C · Test automation · Req. traceability</div>
+        <div class="project-title">Django Web Application — Personal Project</div>
+        <div class="project-desc">Building a Django-based web application with user authentication, database models, and templated views. Applying MVC architecture and Django's ORM to create a structured, maintainable backend web project.</div>
+        <div class="project-stack">Python · Django · HTML · CSS · SQLite</div>
+        <span class="project-badge">In progress</span>
       </div>
 
       <div class="project-card">
         <div class="project-num">03</div>
-        <div class="project-title">Automated Test Workflow for ECU Modules</div>
-        <div class="project-desc">Automated test execution and coverage reporting for ECU software validation, reducing manual effort and improving traceability between software requirements and test outcomes.</div>
-        <div class="project-stack">Python · Test automation toolchain</div>
+        <div class="project-title">Python Automation & Data Analysis</div>
+        <div class="project-desc">Developed Python scripts for data processing, automated validation workflows, and structured reporting — applied during professional work at Bosch and continued independently. Foundation for ML pipeline and cloud integration work.</div>
+        <div class="project-stack">Python · Pandas · Automation · Data analysis</div>
       </div>
 
       <div class="project-card">
         <div class="project-num">04</div>
-        <div class="project-title">RTOS &amp; IoT Systems — Personal Study</div>
-        <div class="project-desc">Ongoing hands-on study of FreeRTOS scheduling, task state machines, inter-task communication, and IoT firmware patterns — building toward production-grade embedded development on STM32 and ESP32.</div>
-        <div class="project-stack">FreeRTOS · C · STM32 · ESP32</div>
+        <div class="project-title">Automated Test Workflow — ECU Systems</div>
+        <div class="project-desc">Automated test execution and coverage reporting for automotive ECU software validation at Bosch, reducing manual effort and improving traceability between software requirements and test outcomes.</div>
+        <div class="project-stack">Python · Test automation · Req. traceability</div>
       </div>
 
     </div>
@@ -299,7 +310,7 @@
     <div class="contact-inner">
       <div>
         <h2 class="contact-heading">Let's work together.</h2>
-        <p class="contact-sub">Open to software and embedded engineering roles, as well as consulting engagements. Especially interested in automotive, safety-critical systems, or IoT. Available for remote and global opportunities.</p>
+        <p class="contact-sub">Open to software engineering internships and roles in Python development, web applications, and cloud-backed systems. Also available for embedded engineering and consulting engagements. Remote-friendly.</p>
         <div class="availability-badge">
           <span class="dot"></span>
           Available for new opportunities
@@ -314,6 +325,10 @@
           <a class="contact-link" href="https://www.linkedin.com/in/priyanka-gp98/" target="_blank">
             <span class="contact-link-label">LinkedIn</span>
             <span>linkedin.com/in/priyanka-gp98</span>
+          </a>
+          <a class="contact-link" href="https://github.com/gppriyanka179-pixel" target="_blank">
+            <span class="contact-link-label">GitHub</span>
+            <span>github.com/gppriyanka179-pixel</span>
           </a>
           <div class="contact-link">
             <span class="contact-link-label">Phone</span>
